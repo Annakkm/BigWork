@@ -26,8 +26,9 @@ namespace BigWork
                 "3. Стандартна помилка\n" +
                 "4. Mедіана\n" +
                 "5. Мода\n" +
-                "6. Стандартне відхилення\n" + 
-                "7. Ексцес (В розробці)");
+                "6. Стандартне відхилення\n" +
+                "7. Ексцес (В розробці)\n" +
+                "8. Асиметрія\n");
 
             Console.WriteLine("Оберіть пункт:");
             string choice = Console.ReadLine();
@@ -63,12 +64,32 @@ namespace BigWork
                     //Console.WriteLine($"Ексцес: {excess}");
                     Console.WriteLine("На жаль, поки що ексцес в розробці, спробуйте пізніше");
                     break;
+                case "8":
+                    double asymmetry = Asymmetry(txt_file);
+                    Console.WriteLine($"Асиметрія: {asymmetry}");
+                    break;
                 default:
                     Console.WriteLine("Некоректний вибір!");
                     break;
             }
 
             Console.ReadKey();
+        }
+
+
+        static double Asymmetry(string txt_file)
+        {
+            double[] data = ReadData(txt_file);
+            int N = data.Length;
+
+            double standart_deviation = StandartDeviation(txt_file); // стандартне відхилення
+            double AverageValue = data.Average();// середнє значення 
+
+            double sum_cubed_diffs = data.Sum(x => Math.Pow(x - AverageValue, 3));
+
+            double asymmetry = (N * sum_cubed_diffs) / ((N - 1) * (N - 2) * Math.Pow(standart_deviation, 3));
+
+            return asymmetry;
         }
 
         static double Excess(string txt_file)
