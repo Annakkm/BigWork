@@ -28,7 +28,8 @@ namespace BigWork
                 "5. Мода\n" +
                 "6. Стандартне відхилення\n" +
                 "7. Ексцес (В розробці)\n" +
-                "8. Асиметрія\n");
+                "8. Асиметрія\n" +
+                "9. Інтервал\n");
 
             Console.WriteLine("Оберіть пункт:");
             string choice = Console.ReadLine();
@@ -68,6 +69,10 @@ namespace BigWork
                     double asymmetry = Asymmetry(txt_file);
                     Console.WriteLine($"Асиметрія: {asymmetry}");
                     break;
+                case "9":
+                    double interval = Interval(txt_file);
+                    Console.WriteLine($"Інтервал: {interval}");
+                    break;
                 default:
                     Console.WriteLine("Некоректний вибір!");
                     break;
@@ -76,6 +81,11 @@ namespace BigWork
             Console.ReadKey();
         }
 
+        static double Interval(string txt_file)
+        {
+            double[] data = ReadData(txt_file);
+            return data.Max() - data.Min();
+        }
 
         static double Asymmetry(string txt_file)
         {
