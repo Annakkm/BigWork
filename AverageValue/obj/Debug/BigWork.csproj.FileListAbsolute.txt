@@ -1,0 +1,14 @@
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\bin\Debug\AverageValue.exe.config
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\bin\Debug\AverageValue.exe
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\bin\Debug\AverageValue.pdb
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\obj\Debug\BigWork.csproj.AssemblyReference.cache
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\obj\Debug\BigWork.csproj.CoreCompileInputs.cache
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\obj\Debug\AverageValue.exe
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\Average\AverageValue\AverageValue\obj\Debug\AverageValue.pdb
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\bin\Debug\AverageValue.exe.config
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\bin\Debug\AverageValue.exe
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\bin\Debug\AverageValue.pdb
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\obj\Debug\BigWork.csproj.AssemblyReference.cache
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\obj\Debug\BigWork.csproj.CoreCompileInputs.cache
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\obj\Debug\AverageValue.exe
+D:\Навчання\КПІ Навчання\ОТтаП\BigWork\Development\BigProject\BigProject\AverageValue\obj\Debug\AverageValue.pdb
