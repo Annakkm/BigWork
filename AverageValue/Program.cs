@@ -19,64 +19,97 @@ namespace BigWork
             Console.OutputEncoding = Encoding.GetEncoding(1251); 
 
             string txt_file = "D:\\Навчання\\КПІ Навчання\\ОТтаП\\BigWork\\Development\\BigProject\\BigProject\\AverageValue\\вар1_TB1_29_ACV.txt";
+            
+            var averageValue = AverageValue(txt_file);
+            Console.WriteLine($"Середнє значення: {averageValue}");
+
+            double variance = Variance(txt_file);
+            Console.WriteLine($"Вибіркова дисперсія: {variance}");
 
 
-            Console.WriteLine("1. Середнє значення\n" +
-                "2. Вибіркова дисперсія\n" +
-                "3. Стандартна помилка\n" +
-                "4. Mедіана\n" +
-                "5. Мода\n" +
-                "6. Стандартне відхилення\n" +
-                "7. Ексцес (В розробці)\n" +
-                "8. Асиметрія\n" +
-                "9. Інтервал\n");
+            double standartError = StandardError(txt_file); //Стандартна помилка
+            Console.WriteLine($"Стандартна помилка: {standartError}");
 
-            Console.WriteLine("Оберіть пункт:");
-            string choice = Console.ReadLine();
+            double median = Median(txt_file); //Медіана
+            Console.WriteLine($"Медіана: {median}");
 
-            switch (choice)
-            {
-                case "1":
-                    var averageValue = AverageValue(txt_file);
-                    Console.WriteLine($"Середнє значення: {averageValue}"); //Середнє значення
-                    break;
-                case "2":
-                    double variance = Variance(txt_file);
-                    Console.WriteLine($"Вибіркова дисперсія: {variance}");
-                    break;
-                case "3":
-                    double standartError = StandardError(txt_file); //Стандартна помилка
-                    Console.WriteLine($"Стандартна помилка: {standartError}");
-                    break;
-                case "4":
-                    double median = Median(txt_file); //Медіана
-                    Console.WriteLine($"Медіана: {median}");
-                    break;
-                case "5":
-                    double mode = Mode(txt_file); // Мода
-                    Console.WriteLine($"Мода: {mode}");
-                    break;
-                case "6":
-                    double standartDeviation = StandartDeviation(txt_file); // стандартне відхилення
-                    Console.WriteLine($"Стандартне відхилення: {standartDeviation}");
-                    break;
-                case "7":
-                    //double excess = Excess(txt_file); // ексцес
-                    //Console.WriteLine($"Ексцес: {excess}");
-                    Console.WriteLine("На жаль, поки що ексцес в розробці, спробуйте пізніше");
-                    break;
-                case "8":
-                    double asymmetry = Asymmetry(txt_file);
-                    Console.WriteLine($"Асиметрія: {asymmetry}");
-                    break;
-                case "9":
-                    double interval = Interval(txt_file);
-                    Console.WriteLine($"Інтервал: {interval}");
-                    break;
-                default:
-                    Console.WriteLine("Некоректний вибір!");
-                    break;
-            }
+            double mode = Mode(txt_file); // Мода
+            Console.WriteLine($"Мода: {mode}");
+
+            double standartDeviation = StandartDeviation(txt_file); // стандартне відхилення
+            Console.WriteLine($"Стандартне відхилення: {standartDeviation}");
+
+            //double excess = Excess(txt_file); // ексцес
+            //        //Console.WriteLine($"Ексцес: {excess}");
+            //        Console.WriteLine("На жаль, поки що ексцес в розробці, спробуйте пізніше");
+
+            double asymmetry = Asymmetry(txt_file);
+            Console.WriteLine($"Асиметрія: {asymmetry}");
+
+
+            double interval = Interval(txt_file);
+            Console.WriteLine($"Інтервал: {interval}");
+
+           
+
+
+
+            //Console.WriteLine("1. Середнє значення\n" +
+            //    "2. Вибіркова дисперсія\n" +
+            //    "3. Стандартна помилка\n" +
+            //    "4. Mедіана\n" +
+            //    "5. Мода\n" +
+            //    "6. Стандартне відхилення\n" +
+            //    "7. Ексцес (В розробці)\n" +
+            //    "8. Асиметрія\n" +
+            //    "9. Інтервал\n");
+
+            //Console.WriteLine("Оберіть пункт:");
+            //string choice = Console.ReadLine();
+
+            //switch (choice)
+            //{
+            //    case "1":
+            //        var averageValue = AverageValue(txt_file);
+            //        Console.WriteLine($"Середнє значення: {averageValue}"); //Середнє значення
+            //        break;
+            //    case "2":
+            //        double variance = Variance(txt_file);
+            //        Console.WriteLine($"Вибіркова дисперсія: {variance}");
+            //        break;
+            //    case "3":
+            //        double standartError = StandardError(txt_file); //Стандартна помилка
+            //        Console.WriteLine($"Стандартна помилка: {standartError}");
+            //        break;
+            //    case "4":
+            //        double median = Median(txt_file); //Медіана
+            //        Console.WriteLine($"Медіана: {median}");
+            //        break;
+            //    case "5":
+            //        double mode = Mode(txt_file); // Мода
+            //        Console.WriteLine($"Мода: {mode}");
+            //        break;
+            //    case "6":
+            //        double standartDeviation = StandartDeviation(txt_file); // стандартне відхилення
+            //        Console.WriteLine($"Стандартне відхилення: {standartDeviation}");
+            //        break;
+            //    case "7":
+            //        //double excess = Excess(txt_file); // ексцес
+            //        //Console.WriteLine($"Ексцес: {excess}");
+            //        Console.WriteLine("На жаль, поки що ексцес в розробці, спробуйте пізніше");
+            //        break;
+            //    case "8":
+            //        double asymmetry = Asymmetry(txt_file);
+            //        Console.WriteLine($"Асиметрія: {asymmetry}");
+            //        break;
+            //    case "9":
+            //        double interval = Interval(txt_file);
+            //        Console.WriteLine($"Інтервал: {interval}");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Некоректний вибір!");
+            //        break;
+            //}
 
             Console.ReadKey();
         }
@@ -257,13 +290,6 @@ namespace BigWork
         static double AverageValue(string txt_file)
         {
             double[] data = ReadData(txt_file);
-
-            Console.WriteLine("Зчитані значення:");
-            foreach (var value in data)
-            {
-                Console.WriteLine(value);
-            }
-            Console.WriteLine("--------------------------");
 
             double AverageValue = data.Average();
 
